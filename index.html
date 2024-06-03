@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculadora</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript">
+        function calcular(){
+            var idade = Number(document.getElementById('idade').value);
+            var meses = Number(document.getElementById('meses').value)|| 0;
+            var total = idade + Math.ceil(meses / 12);
+            if(total >= 100){
+                document.getElementById('R').innerHTML = "Pessoas com ou mais de 100 anos não podem namorar 👨‍🦳 "
+                return
+        }
+        if(total < 13){
+            document.getElementById('R').innerHTML = "voce não pode namorar ainda";
+            return;
+        }
+        var min = Math.ceil(total/ 2 + 7);
+        var max = total * 2 - 13;
+        if(max >= 100){
+            max =  min
+        }
+        var comparadoridade = "Só pode namorar alguem entre: " + min + " até " + max + " anos.";
+        var comparadortrisal = "voce pode fazer um trisal com duas pessoas que tenham: " + min + " anos. ";
+        document.getElementById('R').innerHTML = comparadoridade + "<br>" + comparadortrisal
+
+    }
+      
+    </script>
+</head>
+<body>
+    <div id="caixa">
+    <h1>Calculadora de Namoro</h1>
+    <label for="idade">Digite a idade</label>
+    <input type="number" id="idade" min="1" required>
+    <br><br></b><label for="meses">Meses</label>
+    <input type="number" id="meses" min="0">
+    <br>
+    <br>
+    <button onclick="calcular()">Calcular</button>
+    <div id="R"></div>
+    </div>
+
+    <footer>
+<h2>Site criado pelo aluno: João victor de morais lima</h2>
+
+
+    </footer>
+</body>
+</html>

@@ -1,0 +1,29 @@
+body{
+    background-image: url(coraçao.jpg);
+    background-size: cover;
+}
+#caixa{
+    text-align: center;
+    padding: 100px;
+    margin: 300px;
+    background-color: pink;
+    border-radius: 70px;
+    border-color: black;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    color:purple
+
+}
+footer{
+    background-color: pink;
+    padding: 10px 20px;
+    text-align: center;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    margin-top: 280px;
+}
+
